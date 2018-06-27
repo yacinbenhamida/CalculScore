@@ -4,21 +4,25 @@
 <h2 class="tah">SCORE 1</h2>
 <form>
 <div class="example-container">
-  <mat-form-field >
-      <form>
-    <input name="moybac" type="number"  [ngModelOptions]="{standalone: true}" [(ngModel)]="moybac" matInput placeholder="Votre moyenne au bac">
-  </form>
+  <mat-form-field hintLabel="la moyenne sur 20">
+    <input name="moybac" type="number" max="20"  [ngModelOptions]="{standalone: true}" [(ngModel)]="moybac" matInput placeholder="Votre moyenne au bac">
+  </mat-form-field>
+  <mat-form-field hintLabel="la moyenne sur 20 pour les semestres 1 et 2">
+    <input name="s1s2" type="number" max="20"  [ngModelOptions]="{standalone: true}" [(ngModel)]="s1s2" matInput placeholder="Votre moyenne générale en 1ére année">
+  </mat-form-field>
+  <mat-form-field hintLabel="la moyenne sur 20 pour les semestres 2 et 3">
+    <input name="s2s3" type="number" max="20"  [ngModelOptions]="{standalone: true}" [(ngModel)]="s2s3" matInput placeholder="Votre moyenne générale en 2éme année">
   </mat-form-field>
   <mat-form-field>
-    <input type="number"  [ngModelOptions]="{standalone: true}" [(ngModel)]="r1" matInput placeholder="Votre rang pour la 1ére année">
+    <input type="number"   [ngModelOptions]="{standalone: true}" [(ngModel)]="r1" matInput placeholder="Votre rang pour la 1ére année">
   </mat-form-field>
-  <mat-form-field>
+  <mat-form-field  hintLabel="toute la promotion">
     <input type="number"  matInput [ngModelOptions]="{standalone: true}" [(ngModel)]="effectif1" placeholder="L'effectif de la promotion (1ére année)">
   </mat-form-field>
   <mat-form-field>
     <input type="number" matInput [ngModelOptions]="{standalone: true}" [(ngModel)]="r2" placeholder="Votre rang pour la 2éme année">
   </mat-form-field>
-  <mat-form-field>
+  <mat-form-field  hintLabel="toute la promotion">
     <input type="number" matInput [ngModelOptions]="{standalone: true}" [(ngModel)]="effectif2" placeholder="L'effectif de la promotion (2éme année)" >
   </mat-form-field>
   <div>
@@ -29,11 +33,13 @@
     </mat-radio-group>
   </div>
   <h2 class="tah">SCORE 2</h2>
-  <mat-form-field >
-    <input type="number" [ngModelOptions]="{standalone: true}" [(ngModel)]="matprincip" matInput placeholder="La moyenne générale de la matiére principale (ex : mathématiques)">
+  <mat-form-field hintLabel="la moyenne sur 20">
+    <input type="number" max="20" #input="ngModel" maxlength="2" [ngModelOptions]="{standalone: true}" [(ngModel)]="matprincip" matInput placeholder="La moyenne générale de la matiére principale (ex : mathématiques)">
+    <mat-hint align="end">{{matprincip >0 && matprincip<=20? matprincip : 0 }}/20</mat-hint>    
   </mat-form-field>
-  <mat-form-field>
-    <input type="number" [ngModelOptions]="{standalone: true}" [(ngModel)]="matgenerale" matInput placeholder="La moyenne générale en français et en anglais">
+  <mat-form-field hintLabel="la moyenne sur 20">
+    <input type="number" max="20" #inp="ngModel"  [ngModelOptions]="{standalone: true}" [(ngModel)]="matgenerale" matInput placeholder="La moyenne générale en français et en anglais">
+    <mat-hint align="end">{{matprincip >0 && matprincip<=20? matprincip : 0 }}/20</mat-hint>    
   </mat-form-field>
   <br/>
 
