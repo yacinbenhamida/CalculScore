@@ -1,0 +1,53 @@
+
+<br/>
+<h1 class="tah">Calcul score concours spécifique</h1>
+<h2 class="tah">SCORE 1</h2>
+<form>
+<div class="example-container">
+  <mat-form-field >
+      <form>
+    <input name="moybac" type="number"  [ngModelOptions]="{standalone: true}" [(ngModel)]="moybac" matInput placeholder="Votre moyenne au bac">
+  </form>
+  </mat-form-field>
+  <mat-form-field>
+    <input type="number"  [ngModelOptions]="{standalone: true}" [(ngModel)]="r1" matInput placeholder="Votre rang pour la 1ére année">
+  </mat-form-field>
+  <mat-form-field>
+    <input type="number"  matInput [ngModelOptions]="{standalone: true}" [(ngModel)]="effectif1" placeholder="L'effectif de la promotion (1ére année)">
+  </mat-form-field>
+  <mat-form-field>
+    <input type="number" matInput [ngModelOptions]="{standalone: true}" [(ngModel)]="r2" placeholder="Votre rang pour la 2éme année">
+  </mat-form-field>
+  <mat-form-field>
+    <input type="number" matInput [ngModelOptions]="{standalone: true}" [(ngModel)]="effectif2" placeholder="L'effectif de la promotion (2éme année)" >
+  </mat-form-field>
+  <div>
+    <label class="tah1">Année de naissance : </label>
+    <mat-radio-group name="annenaiss" [(ngModel)]="annenaiss">
+      <mat-radio-button   value="1997">1997 </mat-radio-button>
+      <mat-radio-button   value="1996"> 1996</mat-radio-button>
+    </mat-radio-group>
+  </div>
+  <h2 class="tah">SCORE 2</h2>
+  <mat-form-field >
+    <input type="number" [ngModelOptions]="{standalone: true}" [(ngModel)]="matprincip" matInput placeholder="La moyenne générale de la matiére principale (ex : mathématiques)">
+  </mat-form-field>
+  <mat-form-field>
+    <input type="number" [ngModelOptions]="{standalone: true}" [(ngModel)]="matgenerale" matInput placeholder="La moyenne générale en français et en anglais">
+  </mat-form-field>
+  <br/>
+
+  <button mat-raised-button color="primary" *ngIf="res == false" (click)="calcul()">Caculer</button>
+  <br/>
+  <button mat-raised-button color="warn" (click)="init()" *ngIf="res == true">réinitialiser</button>
+  <br/>
+  <div style="text-align: center;" *ngIf="res == true">
+  <div class="tah1">
+    score 1 : {{s1}}/125<br/> 
+    score 2 : {{s2}}/40
+  </div>
+  <h2 class="tah">SCORE GLOBAL = SCORE 1 + SCORE 2</h2>
+  <h1 class="tah">VOTRE SCORE : {{totale}}/165</h1>
+</div>
+</div>
+</form>

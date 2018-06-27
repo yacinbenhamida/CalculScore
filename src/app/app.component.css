@@ -1,0 +1,17 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 40%;
+    margin-left: 30%;
+  }
+  .tah{
+      font-family: Tahoma;
+      text-align: center;
+      font-size: 25px;
+  }
+  .tah1{
+    font-family: Tahoma;
+  }
