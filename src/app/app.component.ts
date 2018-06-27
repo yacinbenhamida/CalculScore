@@ -37,7 +37,7 @@ export class AppComponent {
     ri1 = (this.r1-1)/this.effectif1;
     ri2 = (this.r2-1)/this.effectif2;
     R = (0.5)*((100-(700*ri1)/3)+(100-(700*ri2)/3))
-    if(this.annenaiss == 1997){
+    if(this.annenaiss == 1997 || this.annenaiss == 1996){
       B1 = 5
     }
     else B1 = 0;
