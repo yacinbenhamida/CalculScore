@@ -34,11 +34,11 @@
   </div>
   <h2 class="tah">SCORE 2</h2>
   <mat-form-field hintLabel="la moyenne sur 20">
-    <input type="number" max="20" #input="ngModel" maxlength="2" [ngModelOptions]="{standalone: true}" [(ngModel)]="matprincip" matInput placeholder="La moyenne générale de la matiére principale (ex : mathématiques)">
+    <input type="number" max="20"  maxlength="2" [ngModelOptions]="{standalone: true}" [(ngModel)]="matprincip" matInput placeholder="La moyenne générale de la matiére principale (ex : mathématiques)">
     <mat-hint align="end">{{matprincip >0 && matprincip<=20? matprincip : 0 }}/20</mat-hint>    
   </mat-form-field>
   <mat-form-field hintLabel="la moyenne sur 20">
-    <input type="number" max="20" #inp="ngModel"  [ngModelOptions]="{standalone: true}" [(ngModel)]="matgenerale" matInput placeholder="La moyenne générale en français et en anglais">
+    <input type="number" max="20"  [ngModelOptions]="{standalone: true}" [(ngModel)]="matgenerale" matInput placeholder="La moyenne générale en français et en anglais">
     <mat-hint align="end">{{matprincip >0 && matprincip<=20? matprincip : 0 }}/20</mat-hint>    
   </mat-form-field>
   <br/>
