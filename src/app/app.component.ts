@@ -47,7 +47,7 @@ export class AppComponent {
     else if(this.moybac<16 && this.moybac >=14){
       B2 = 15
     }
-    else if (this.moybac <14 && this.moybac >12){
+    else if (this.moybac <14 && this.moybac >=12){
       B2 = 10
     }
     else if (this.moybac <12 && this.moybac >=11){
