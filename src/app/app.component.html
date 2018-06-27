@@ -39,7 +39,7 @@
   </mat-form-field>
   <mat-form-field hintLabel="la moyenne sur 20">
     <input type="number" max="20"  [ngModelOptions]="{standalone: true}" [(ngModel)]="matgenerale" matInput placeholder="La moyenne générale en français et en anglais">
-    <mat-hint align="end">{{matprincip >0 && matprincip<=20? matprincip : 0 }}/20</mat-hint>    
+    <mat-hint align="end">{{matgenerale >0 && matgenerale<=20? matgenerale : 0 }}/20</mat-hint>    
   </mat-form-field>
   <br/>
 
@@ -49,11 +49,11 @@
   <br/>
   <div style="text-align: center;" *ngIf="res == true">
   <div class="tah1">
-    score 1 : {{s1}}/125<br/> 
-    score 2 : {{s2}}/40
+    score 1 : {{s1.toFixed(2)}}/125<br/> 
+    score 2 : {{s2.toFixed(2)}}/40
   </div>
   <h2 class="tah">SCORE GLOBAL = SCORE 1 + SCORE 2</h2>
-  <h1 class="tah">VOTRE SCORE : {{totale}}/165</h1>
+  <h1 class="tah">VOTRE SCORE : {{totale.toFixed(2)}}/165</h1>
 </div>
 </div>
 </form>
