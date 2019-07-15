@@ -1,7 +1,7 @@
 
 <br/>
-<h1 class="tah">Calcul score concours spécifique</h1>
-<h2 class="tah">SCORE 1</h2>
+<h1 class="tah">Calculez votre score pour le concours spécifique d'accés aux<br/> établissements de formation d'ingénieurs en Tunisie</h1>
+<h2 class="tah">score 1</h2>
 <form>
 <div class="example-container">
   <mat-form-field hintLabel="la moyenne sur 20">
@@ -28,12 +28,12 @@
   <div>
     <label class="tah1">Année de naissance : </label>
     <mat-radio-group name="annenaiss" [(ngModel)]="annenaiss">
-      <mat-radio-button   value="1997"> 1997 </mat-radio-button>
-      <mat-radio-button   value="1996"> 1996 </mat-radio-button>
-      <mat-radio-button   value="1995"> 1995 </mat-radio-button>
+      <mat-radio-button   value="1997"> 1998 (ou +) </mat-radio-button>
+      <mat-radio-button   value="1996"> 1997 </mat-radio-button>
+      <mat-radio-button   value="1995"> 1996 (ou - ) </mat-radio-button>
     </mat-radio-group>
   </div>
-  <h2 class="tah">SCORE 2</h2>
+  <h2 class="tah">score 2</h2>
   <mat-form-field hintLabel="la moyenne sur 20">
     <input type="number" max="20"  maxlength="2" [ngModelOptions]="{standalone: true}" [(ngModel)]="matprincip" matInput placeholder="La moyenne générale de la matiére principale (ex : mathématiques)">
     <mat-hint align="end">{{matprincip >0 && matprincip<=20? matprincip : 0 }}/20</mat-hint>    
@@ -48,6 +48,7 @@
   <br/>
   <button mat-raised-button color="warn" (click)="init()" *ngIf="res == true">réinitialiser</button>
   <br/>
+  <h2 class="tah"><a href="https://yacinbenhamida.github.io/">yacinbenhamida.github.io</a></h2>  
   <div style="text-align: center;" *ngIf="res == true">
   <div class="tah1">
     score 1 : {{s1.toFixed(2)}}/125<br/> 
